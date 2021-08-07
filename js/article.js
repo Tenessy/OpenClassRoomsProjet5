@@ -1,4 +1,3 @@
-
 class Teddy {
     constructor(tedArticle) {
         this.colors = tedArticle.colors;
@@ -8,4 +7,6 @@ class Teddy {
         this.imageUrl = tedArticle.imageUrl;
         this.description = tedArticle.description;
     }
+   
 }
+

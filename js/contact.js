@@ -1,10 +1,9 @@
-class contact {
-    constructor(firstName, lastName, mail, adress, city) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.mail = mail;
-        this.adress = adress;
-        this.city = city;
-    }
+let contact = {
+    firstName: 'Jean',
+    lastName: 'Eric',
+    mail: 'eric.dupond@outlook.fr',
+    adress: '3 rue du bourg',
+    city: 'Rennes',    
 }
+
 
