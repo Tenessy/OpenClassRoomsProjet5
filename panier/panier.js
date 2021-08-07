@@ -1,6 +1,24 @@
-let _data = {name: "Fanny"};
-
+function getProduct() {
+    let getStorage = localStorage.getItem("panier");
     
+     if(getStorage == null) {
+       return [];
+     }
+     else {
+       console.log(JSON.parse(getStorage));
+       return JSON.parse(getStorage); 
+     }   
+   }
+   var contact = {
+    firstName: 'Jean',
+    lastName: 'Eric',
+    mail: 'eric.dupond@outlook.fr',
+    adress: '3 rue du bourg',
+    city: 'Rennes',    
+}
+console.log(contact);
+console.log(getProduct());
+
 
 fetch("http://localhost:3000/api/teddies/order", 
 {
@@ -9,7 +27,7 @@ fetch("http://localhost:3000/api/teddies/order",
         'Accept': 'application/json',
         'Content-Type': 'application/json'
     },
-    body: JSON.stringify(_data)
+    body: JSON.stringify({products: getProduct()}, contact)
 
 })
 .then(res => res.json())
