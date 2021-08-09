@@ -1,6 +1,3 @@
-function redirectUrl() {
-  document.location.href = url();
-}
 
 fetch("http://localhost:3000/api/teddies")
  .then(data => data.json())
@@ -14,21 +11,13 @@ fetch("http://localhost:3000/api/teddies")
             <h5 class="card-title">${teddy.name}</h5>
             <h6 class="card-subtitle mb-2 text-muted">${teddy.price}€</h6>
             <p class="card-text">${teddy.description}</p>
-            <a href="#" class="btn btn-primary" data-id="${teddy._id}">Voir le produit</a>
+            <div class="col text-center">
+              <a href="produit/produit.html?id=${teddy._id}" class="btn btn-primary">Voir le produit</a>
+            </div>
           </div>
-        </div>`
-
-      
+        </div></br>`
+        
     } 
-    document.querySelectorAll(".btn-primary").forEach(bouton => {
-        bouton.addEventListener("click", function(e) {
-          addTeddy(this.dataset.id);
-          redirectUrl();
-          
-        });
-    })
-
-   
- })
+});
 
  
