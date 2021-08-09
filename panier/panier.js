@@ -1,57 +1,39 @@
-function getProduct() {
-    let getStorage = localStorage.getItem("panier");
-    
-     if(getStorage == null) {
-       return [];
-     }
-     else {
-       console.log(JSON.parse(getStorage));
-       return JSON.parse(getStorage); 
-     }   
+const paniers = getPanier();
+const sommePrix = getSum();
+const panierVide = paniers.length === 0;
+
+document.getElementById("titre").innerHTML = panierVide ? "Votre panier Orinoco est vide" : "Votre panier";
+document.getElementById("prix").innerHTML = sommePrix;
+
+for(let panier of paniers) {
+    let teddyPanier = new Teddy(panier);
+     document.querySelector(".container").innerHTML += 
+    ` <div class="card" style="width: 18rem;">
+     <img src="${teddyPanier.imageUrl}" class="card-img-top" alt="...">
+     <div class="card-body">
+       <h5 class="card-title">${teddyPanier.name}</h5>
+       <h6 class="card-subtitle mb-2 text-muted">${teddyPanier.price}€</h6>
+       <p class="card-text">${teddyPanier.description}</p>
+       <select class="form-select selected" data-id="${teddyPanier._id}"aria-label="Default select example">
+         <option value="1">1</option>
+         <option value="2">2</option>
+         <option value="3">3</option>
+        <option value="4">4</option>
+       </select>
+     </div>
+   </div></br>` 
+   function compte(){
+       document.querySelector(".selected").addEventListener("change", function(e){
+           let valeur = e.target.value;
+           console.log(teddyPanier._id);
+          let somme = 0
+          somme += valeur * e.target.teddyPanier.price;
+          console.log(somme);
+       })
+
    }
-   var contact = {
-    firstName: 'Jean',
-    lastName: 'Eric',
-    mail: 'eric.dupond@outlook.fr',
-    adress: '3 rue du bourg',
-    city: 'Rennes',    
+   compte();
+
 }
-console.log(contact);
-console.log(getProduct());
 
 
-fetch("http://localhost:3000/api/teddies/order", 
-{
-    method: "POST",
-    headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({products: getProduct()}, contact)
-
-})
-.then(res => res.json())
- .then(json => console.log(json));
-
- /*.then(listPanier => {
-     for(let Panier of listPanier) {
-         let Teddypanier = new Teddy(Panier);
-
-        document.querySelectorAll(".panierTeddy").forEach(panier => {
-            panier.addEventListener("click", function(e) {
-                document.querySelector(".card").innerHTML += 
-            `<div class="card" style="width: 18rem;">
-                <img src="${Teddypanier.imageUrl}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">${Teddypanier.name}</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">${Teddypanier.price}€</h6>
-                  <span class="couleur">${recupColor()}</span>
-                </div>
-            </div>`
-
-            })
-        
-        })
-     }
- })
-*/
