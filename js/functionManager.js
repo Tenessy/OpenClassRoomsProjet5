@@ -1,50 +1,79 @@
 function getUrl() {
-   const getId= url().searchParams.get("id");
-    const id = afficheId();
-    if (getId == id) {
-         return id;
-    }  
+   let Url = new URL(window.location);
+    Url.pathname="produit/produit.html";
+    const searchId = Url.searchParams.get("id");
+
+    return searchId;
+}
+function isValid(value) {
+    return /^[a-zA-Z]+$/.test(value);
+}
+function isValidMail(value) {
+    return /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,4}$/.test(value);
+}
+function isValidAdress(value) {
+   return /^[0-9]{1,} [a-zA-Z]{3,} [a-zA-Z]{2,}/.test(value);
+}
+/*
+firstNameValue.addEventListener('input', function(e){
+    let valeur = e.target.value;
+    if (!isValid(valeur)) {
+        console.log("Veuillez entrer des caractères valides");
+        e.preventDefault();
+    }
     else {
-        document.querySelector(".container").innerHTML =
-        "<h1>Erreur 404 page introuvable</h1>";
-        console.log("Erreur 404 page introuvable");
-    }    
-}
-
-function url() {
-    let url = new URL(window.location);
-    url.pathname="produit/produit.html";// Url de base de la page 
-    const id =  afficheId();
-    url.searchParams.append("id", id);// ajoute un paramètre id avec l'id de l'ours en paramètre
-
-  return url;
-}
-
-function addTeddy(teddyId) {
-    recupId(teddyId);      
-}
-
-function recupId(getId) {
-    localStorage.setItem("teddyId", JSON.stringify(getId));        
-}   
-
-  function afficheId() {
-    let id = localStorage.getItem("teddyId");
-        if(id == null) {
-            console.log("hey");
-            return[];    
-        }
-        else {
-            console.log(JSON.parse(id));
-            return JSON.parse(id);     
-        }  
-}
-
-function recupColor(color) {
-    return color;
-}
-
-
-
- 
- 
+       console.log("Tout est bon");
+       contact.firstName = valeur;
+       console.log(contact.firstName);
+    }
+},false)
+lastNameValue.addEventListener("input", function(e) {
+   let valeur = e.target.value;
+    if (!isValid(valeur)) {
+      console.log("Veuillez entrer des caractères valides");
+      e.preventDefault();
+    }
+    else {
+      console.log("Tout est bon");
+      contact.lastName = valeur;
+      console.log(contact.lastName);
+    }
+},false)
+mailValue.addEventListener("input", function(e){
+    let valeur = e.target.value;
+    if (!isValidMail(valeur)) {
+      console.log("Veuillez entrer des caractères valides");
+      e.preventDefault();
+    }
+   else {
+      console.log("Tout est bon");
+      contact.mail= valeur;
+      console.log(contact.mail);
+      console.log(contact);
+    }
+},false)
+adressValue.addEventListener("input", function(e) {
+   let valeur = e.target.value;
+    if (!isValidAdress(valeur)) {
+      console.log("Veuillez entrer des caractères valides");
+      e.preventDefault();
+    }
+    else {
+      console.log("Tout est bon");
+      contact.adress = valeur;
+      console.log(contact.adress);
+    }
+},false)
+cityValue.addEventListener("input", function(e) {
+   let valeur = e.target.value;
+    if (!isValid(valeur)) {
+      console.log("Veuillez entrer des caractères valides");
+      e.preventDefault();
+    }
+    else {
+       console.log("Tout est bon");
+       contact.city = valeur;
+      console.log(contact.city);
+   }
+},false)
+*/
