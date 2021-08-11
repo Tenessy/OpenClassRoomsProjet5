@@ -1,14 +1,17 @@
 const productId = productsId();
-console.log(productsId());
+const objContact = getContact();
+ console.log(productId);
 
-   let contact = {
-        firstName: "ten",
-        lastName: "enes",
-        email: "tendu35@hotmail;fr",
-        address: "3 rup du pej",
-        city: "paris",    
-    }
-    console.log(contact);   
+//const formContact = formContacts();
+
+function returnContact(contact) {
+  return contact;
+}
+//console.log(formContacts);
+//console.log(formContacts);
+
+//console.log(productsId());
+//const formContact = formControlContact();
     
 fetch("http://localhost:3000/api/teddies/order", 
 {
@@ -17,10 +20,14 @@ fetch("http://localhost:3000/api/teddies/order",
         'Accept': 'application/json',
         'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ contact, products: productId }),
+    body: JSON.stringify({ contact: objContact, products: productId }),
 
 })
-.then(res => res.json())
+.then(function(res) {
+  if (res.ok) {
+    return res.json();
+  }
+})
  .then(orders => {
      console.log(orders.products);
     orders.products.forEach(product => {
