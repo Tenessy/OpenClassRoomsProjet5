@@ -1,57 +1,62 @@
-let contact = {
-    firstName,
-    lastName,
-    mail,
-    adress,
-    city,    
+
+let firstNameValue = document.getElementById("firstName");
+let lastNameValue = document.getElementById("lastName");
+let mailValue = document.getElementById("email");
+let addressValue = document.getElementById("address");
+let cityValue = document.getElementById("city");
+let form = document.getElementById("poster");
+let envoyer = document.getElementById("envoyer");
+if(form) {
+    form.addEventListener("submit", function (e){
+        console.log(lastNameValue);
+        let form_Valid = true;
+        if(!lastNameValue.validity.valid || lastNameValue.value == "") {
+            console.log("erreur lastname");
+            lastNameValue.innerHTML ='Erreur lastname';
+            form_Valid = false
+            e.preventDefault();
+        }
+        if(!firstNameValue.validity.valid || firstNameValue.value == "") {
+            console.log("erreur lastname");
+            firstNameValue.innerHTML ='Erreur lastname';
+            form_Valid = false
+            e.preventDefault();
+        }
+        if(!mailValue.validity.valid || mailValue.value == "") {
+            console.log("erreur lastname");
+            mailValue.innerHTML ='Erreur lastname';
+            form_Valid = false
+            e.preventDefault();
+        }
+        if(!addressValue.validity.valid || addressValue.value == "") {
+            console.log("erreur adresse");
+            addressValue.innerHTML ='Erreur adresse';
+            form_Valid = false;
+            e.preventDefault();
+        }
+        if(!cityValue.validity.valid || cityValue.value == "") {
+            console.log("erreur city");
+            addressValue.innerHTML ='Erreur lastname';
+            e.preventDefault();
+            form_Valid = false;
+        }
+        if(!form_Valid) {
+            console.log("formualaire invalide");
+            e.preventDefault();
+        }
+        else {
+            let contact = new Object();
+                contact.firstName = firstNameValue.value;
+                contact.lastName = lastNameValue.value;
+                contact.email = mailValue.value;
+                contact. address = addressValue.value;
+                contact.city = cityValue.value;
+    
+                addContact(contact);
+             
+        }
+    });
+    
 }
-const firstNameValue = document.getElementById("firstName");
-const lastNameValue = document.getElementById("lastName");
-const mailValue = document.getElementById("mail");
-const adressValue = document.getElementById("adress");
-const cityValue = document.getElementById("city");
-const form = document.getElementById("poster");
-  
-form.addEventListener("submit", function (e){
-    console.log(lastNameValue);
-    if(!lastNameValue.validity.valid || lastNameValue.value == "") {
-        console.log("erreur lastname");
-        lastNameValue.innerHTML ='Erreur lastname';
-        e.preventDefault();
-    }
-    else {
-        console.log("tout est ok");
-    }
-    if(!firstNameValue.validity.valid || firstNameValue.value == "") {
-        console.log("erreur lastname");
-        firstNameValue.innerHTML ='Erreur lastname';
-        e.preventDefault();
-    }
-    else {
-        console.log("tout est ok");
-    }
-    if(!mailValue.validity.valid || mailValue.value == "") {
-        console.log("erreur lastname");
-        mailValue.innerHTML ='Erreur lastname';
-        e.preventDefault();
-    }
-    else {
-        console.log("MAIL est ok");
-    }
-    if(!adressValue.validity.valid || adressValue.value == "") {
-        console.log("erreur adresse");
-        adressValue.innerHTML ='Erreur adresse';
-        e.preventDefault();
-    }
-    else {
-        console.log("adress est ok");
-    }
-    if(!cityValue.validity.valid || cityValue.value == "") {
-        console.log("erreur city");
-        adressValue.innerHTML ='Erreur lastname';
-        e.preventDefault();
-    }
-    else {
-        console.log("Ville est ok");
-    }
-})
+   
+
