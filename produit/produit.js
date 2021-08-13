@@ -13,12 +13,13 @@ fetch("http://localhost:3000/api/teddies/" + getUrlId)
   .then(teddy => {
         let ted = new Teddy(teddy);
         if(ted._id === getUrlId) {
-          document.querySelector(".container").innerHTML = 
+          document.querySelector(".carte").innerHTML = 
           `<div class="card" style="width: 18rem;">
           <img src="${ted.imageUrl}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">${ted.name}</h5>
             <h6 class="card-subtitle mb-2 text-muted">${ted.price}€</h6>
+            <h6>Choisissez votre couleur:</h6>
             <select class="form-select selected"></select>
             <p class="card-text">${ted.description}</p>
             <div class="col text-center">
@@ -47,6 +48,8 @@ fetch("http://localhost:3000/api/teddies/" + getUrlId)
         document.querySelectorAll(".ajout").forEach(ajouter => {
           ajouter.addEventListener("click", function(e) {
              addProduct(teddy);
+             document.querySelector('.alertProduit').style.display = 'block';
+             document.querySelector('.alertProduit').innerHTML = ted.name +  " a été ajouté à votre panier avec succès"
           })
         })
 })

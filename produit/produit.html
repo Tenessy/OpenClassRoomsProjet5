@@ -9,13 +9,58 @@
     </head>
     <body>
         <header>
-            <h1>Orinoco</h1>
-           <button id ="retour"><a href="../index.html">Retour</a></button>
-            <a href="../panier/panier.html?products=teddy"><i class="fas fa-shopping-cart panierTeddy"></i></a>
+          <header>
+            <div class="bg-dark">
+              <div class="container">
+              <div class="row">
+                <nav class="navbar navbar-expand">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                 </button>
+                 <div id="navbarContent" class="collapse navbar-collapse">
+                   <ul class="navbar-nav">
+                     <li class="nav-item">
+                      <a class="nav-link" href="../index.html"><i class="fas fa-home"></i>Accueil</a>
+                     </li>
+                     <li class="nav-item">
+                       <a class= "nav-link" href="../panier/panier.html"><i class="fas fa-shopping-cart panierTeddy"></i>Panier</a>
+                     </li>
+                   </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+            </div>
+          </header>
         </header>
         <section>
-          <div class="container"></div>
+          <h1>Selection de votre produit</h1>
+          <div class="container">
+            <div class="row">
+             <div class="col">
+              <div class="carte"></div>
+              <div class="alert alert-success alertProduit" role="alert"></div>
+             </div>
+           </div>
+          </div>
         </section>
+        <footer>
+          <div class="bg-dark">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <ul class="list-inline text-center">
+                    <li class="list-inline-item"><a href="#">À propos</a></li>
+                    <li class="list-inline-item">&middot;</li>
+                    <li class="list-inline-item"><a href="#">Vie privée</a></li>
+                    <li class="list-inline-item">&middot;</li>
+                    <li class="list-inline-item"><a href="#">Conditions d'utilisations</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
         <script src="../js/functionManager.js"></script>
         <script src="../js/article.js"></script>
         <script src="../js/panierManager.js"></script>
