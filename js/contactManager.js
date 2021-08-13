@@ -1,4 +1,3 @@
-
 function addContact(contact) {
     sessionStorage.setItem("contact", JSON.stringify(contact));
 }

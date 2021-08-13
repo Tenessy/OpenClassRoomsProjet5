@@ -32,11 +32,11 @@ function productsId() {
   return arrayTeddyId;  // retourne le tableau d'Id des ours présents dans le panier
 }
 function getSum() {
-  let sum = 0;
+  let somme = 0;
   for (let i = 0; i < panier.length; i++) {
-        sum += panier[i].price;
+        somme += panier[i].price;
   }    
-  return "Prix total: " + sum + " € ";
+  return  "Prix total: " + somme + " € ";
 }
 
 function deleteProduct(index) {
