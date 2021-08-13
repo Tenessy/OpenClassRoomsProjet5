@@ -31,7 +31,7 @@ fetch("http://localhost:3000/api/teddies/order",
  .then(orders => {
      console.log(orders.products);
     orders.products.forEach(product => {
-        document.querySelector(".container").innerHTML +=
+        document.querySelector(".carte").innerHTML +=
         `<div class="card" style="width: 18rem;">
         <img src="${product.imageUrl}" class="card-img-top" alt="...">
         <div class="card-body">
@@ -41,9 +41,9 @@ fetch("http://localhost:3000/api/teddies/order",
       </div></br>`
     })
 
-    document.getElementById("orderId").innerHTML = 'Numéro de commande:' + orders.orderId;
+    document.getElementById("orderId").innerHTML = `<div class="h6">Numéro de commande: ${orders.orderId}</div>`;
     document.getElementById("orderCustomer").innerHTML = 
-    " Merci " + orders.contact.firstName + " pour votre commande chez Orinoco !";
+    `<div class= "alert alert-success" role="alert"> Félicitions ${orders.contact.firstName} pour votre commande chez Orinoco !</div>`;
     document.getElementById("somme").innerHTML = getSum();
  });
    

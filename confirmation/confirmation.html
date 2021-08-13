@@ -9,14 +9,32 @@
     </head>
     <body>
         <header>
-            <h1>Orinoco</h1>
-           <button id ="retour"><a href="../index.html">Retour</a></button>
-            <a href="../panier/panier.html"><i class="fas fa-shopping-cart panierTeddy"></i></a>
+          <div class="bg-dark">
+            <div class="container">
+            <div class="row">
+              <nav class="navbar navbar-expand">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+               <div id="navbarContent" class="collapse navbar-collapse">
+                 <ul class="navbar-nav">
+                   <li class="nav-item">
+                    <a class="nav-link" href="../index.html"><i class="fas fa-home"></i>Accueil</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class= "nav-link" href="../panier/panier.html"><i class="fas fa-shopping-cart panierTeddy"></i>Panier</a>
+                   </li>
+                 </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+          </div>
         </header>
         <section>
-          <h2 id="orderId"></h2>
-          <h3 id ="orderCustomer"></h3>
-          <div class="container"></div>
+          <h2 id ="orderCustomer"></h3>
+          <h3 id="orderId"></h2>
+          <div class="container carte"></div>
           <h4 id="somme"></h4>
         </section>
 
