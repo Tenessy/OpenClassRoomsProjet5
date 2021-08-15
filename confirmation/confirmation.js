@@ -32,8 +32,8 @@ fetch("http://localhost:3000/api/teddies/order",
      console.log(orders.products);
     orders.products.forEach(product => {
         document.querySelector(".carte").innerHTML +=
-        `<div class="card" style="width: 18rem;">
-        <img src="${product.imageUrl}" class="card-img-top" alt="...">
+        `<div class="card" width="120" height="50">
+          <img src="${product.imageUrl}" class="card-img-top"  alt="...">
         <div class="card-body">
           <h5 class="card-title">${product.name}</h5>
           <h6 class="card-subtitle mb-2 text-muted">${product.price}€</h6>
