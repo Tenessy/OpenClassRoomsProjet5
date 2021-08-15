@@ -6,11 +6,11 @@ const getSomme = getSum();
 let prix =document.getElementById("prix");
 let corps = document.querySelector(".corps");
 if (panierVide) {
-  corps.innerHTML = `
-      <div class="card">
-        <img src= "../PanierVide.png" />
-        <a class="btn btn-primary" href="../index.html" role="button">Continuez vos achats</a>
-      </div></br>`
+  corps.innerHTML = 
+     `<div class="text-center">
+         <img src= "../image/PanierVide.png" width="450"/></br></br>
+         <a class="btn btn-primary" href="../index.html" role="button">Continuez vos achats</a>
+       </div></br>`
       titre.innerHTML = "Votre panier Orinoco est vide";
 
 }
@@ -29,7 +29,7 @@ for(let panier of paniers) {
        <h5 class="card-title">${teddyPanier.name}</h5>
        <h6 class="card-subtitle mb-2 text-muted price">${teddyPanier.price}€</h6>
        <p class="card-text">${teddyPanier.description}</p>
-       <h6>Qté</h6> <select class="form-select selected" data-id="${teddyPanier._id}" aria-label="Default select example">
+       <h6>Qté</h6><select class="form-select selected" data-id="${teddyPanier._id}" aria-label="Default select example">
          <option value="1">1</option>
          <option value="2">2</option>
          <option value="3">3</option>
