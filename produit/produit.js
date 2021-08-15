@@ -5,8 +5,9 @@ fetch("http://localhost:3000/api/teddies/" + getUrlId)
     return res.json();
   }
   else {
-    document.querySelector(".container").innerHTML =
-          "<h1>Erreur 404 page introuvable</h1>";
+    document.querySelector(".generale").innerHTML =
+          `<h1>Erreur 404 page introuvable</h1>
+          <img src="../image/404-error.jpg" alt="NotFound" />`;
           console.log("Erreur 404 page introuvable");
   }
 })
@@ -14,18 +15,16 @@ fetch("http://localhost:3000/api/teddies/" + getUrlId)
         let ted = new Teddy(teddy);
         if(ted._id === getUrlId) {
           document.querySelector(".carte").innerHTML = 
-          `<div class="card" style="width: 18rem;">
-          <img src="${ted.imageUrl}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">${ted.name}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">${ted.price}€</h6>
-            <h6>Choisissez votre couleur:</h6>
-            <select class="form-select selected"></select>
+          `<div class="container" width="350">
+          <img src="${ted.imageUrl}"  class="card-img-top" alt="...">
+          <h2 class="kalam">${ted.name}</h2>
+            <h3 class="kalam">Prix: ${ted.price}€</h3>
             <p class="card-text">${ted.description}</p>
+            <h6>Choisissez votre couleur:</h6>
+            <select class="form-select selected" style="width:300px"></select></br>
             <div class="col text-center">
-              <a href="#" class="btn btn-primary ajout" data-id="${ted._id}">Ajouter au panier</a>
+              <a href="#" class="btn btn-outline-primary ajout designAjout" data-id="${ted._id}">Ajouter au panier</a>
             </div>
-          </div>
         </div>` 
         }
         else {
@@ -49,7 +48,7 @@ fetch("http://localhost:3000/api/teddies/" + getUrlId)
           ajouter.addEventListener("click", function(e) {
              addProduct(teddy);
              document.querySelector('.alertProduit').style.display = 'block';
-             document.querySelector('.alertProduit').innerHTML = ted.name +  " a été ajouté à votre panier avec succès"
+             document.querySelector('.alertProduit').innerHTML = ted.name + " a été ajouté à votre panier avec succès " + `<a href="../panier/panier.html>Voir mon panier</a>`
           })
         })
 })
