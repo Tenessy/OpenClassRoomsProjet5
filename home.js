@@ -5,7 +5,7 @@ fetch("http://localhost:3000/api/teddies")
       for(let teddieArticle of teddiesArticle) {
           let teddy = new Teddy(teddieArticle);
           document.querySelector(".carte").innerHTML += 
-          `<div class="col-4 lg">
+          `
             <div class="card" style="width: 18rem;">
               <img src="${teddy.imageUrl}" class="card-img-top" alt="...">
               <div class="card-body>
@@ -16,7 +16,6 @@ fetch("http://localhost:3000/api/teddies")
                  <a href="produit/produit.html?id=${teddy._id}" class="btn btn-primary">Voir le produit</a>
                </div>
                </div>
-              </div>
           </div></br>`
         
     } 
