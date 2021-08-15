@@ -1,9 +1,10 @@
 function getUrl() {
    let Url = new URL(window.location);
     Url.pathname="produit/produit.html";
-    const searchId = Url.searchParams.get("id");
+    const searchId = Url.searchParams.get("id"); 
+    console.log(searchId);
 
-    return searchId;
+    return searchId; //retourne l'id contenu dans l'URL;
 }
 function isValid(value) {
     return /^[a-zA-Z]+$/.test(value);
