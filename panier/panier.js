@@ -7,8 +7,8 @@ let prix =document.getElementById("prix");
 let corps = document.querySelector(".corps");
 if (panierVide) {
   corps.innerHTML = 
-     `<div class="text-center">
-         <img src= "../image/PanierVide.png" width="450"/></br></br>
+     `<div class="text-center imgAuto">
+         <img src= "../image/PanierVide.png" class="imgAuto"/></br></br>
          <a class="btn btn-primary" href="../index.html" role="button">Continuez vos achats</a>
        </div></br>`
       titre.innerHTML = "Votre panier Orinoco est vide";
