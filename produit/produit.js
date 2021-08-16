@@ -16,8 +16,8 @@ fetch("http://localhost:3000/api/teddies/" + getUrlId)
         if(ted._id === getUrlId) {
           document.querySelector(".carte").innerHTML = 
           `<div class="container" width="350">
-          <img src="${ted.imageUrl}"  class="card-img-top" alt="...">
-          <h2 class="kalam">${ted.name}</h2>
+          <img src="${ted.imageUrl}" class="card-img-top" alt="...">
+          </br></br><h2 class="kalam">${ted.name}</h2>
             <h3 class="kalam">Prix: ${ted.price}€</h3>
             <p class="card-text">${ted.description}</p>
             <h6>Choisissez votre couleur:</h6>
