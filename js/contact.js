@@ -112,7 +112,7 @@ if(form) {
             form_Valid = false;
         }
         if(!form_Valid) {
-            console.log("formualaire invalide");
+            console.log("formulaire invalide");
             e.preventDefault();
         }
         else {
