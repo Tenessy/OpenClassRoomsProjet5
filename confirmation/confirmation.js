@@ -1,18 +1,6 @@
 const productId = productsId();
 const objContact = getContact();
- console.log(productId);
-
-//const formContact = formContacts();
-
-function returnContact(contact) {
-  return contact;
-}
-//console.log(formContacts);
-//console.log(formContacts);
-
-//console.log(productsId());
-//const formContact = formControlContact();
-    
+ 
 fetch("http://localhost:3000/api/teddies/order", 
 {
     method: "POST",
@@ -43,7 +31,7 @@ fetch("http://localhost:3000/api/teddies/order",
 
     document.getElementById("orderId").innerHTML = `<div class="h6">Numéro de commande: ${orders.orderId}</div>`;
     document.getElementById("orderCustomer").innerHTML = 
-    `<div class= "alert alert-success" role="alert"> Félicitions ${orders.contact.firstName} pour votre commande chez Orinoco !</div>`;
+    `<div class= "alert alert-success" role="alert"> Félicitations ${orders.contact.firstName} pour votre commande chez Orinoco !</div>`;
     document.getElementById("somme").innerHTML = getSum();
  });
    
