@@ -22,22 +22,23 @@ else {
 
 for(let panier of paniers) {
     let teddyPanier = new Teddy(panier);
-     document.querySelector(".carte").innerHTML +=
-    ` <div class="card update" style="width: 18rem;">
-     <img src="${teddyPanier.imageUrl}" class="card-img-top" alt="...">
-     <div class="card-body">
-       <h5 class="card-title">${teddyPanier.name}</h5>
-       <h6 class="card-subtitle mb-2 text-muted price">${teddyPanier.price}€</h6>
-       <p class="card-text">${teddyPanier.description}</p>
-       <h6>Qté</h6><select class="form-select selected" data-id="${teddyPanier._id}" aria-label="Default select example">
+     document.querySelector(".card").innerHTML +=
+    `<div class="panier">
+      <img src="${teddyPanier.imageUrl}" class="card-img-top" alt="...">
+      <div class="card-body">
+       <h5 class="card-title kalam">${teddyPanier.name}</h5>
+       <h6 class="card-subtitle mb-2 price kalam panier--color">${teddyPanier.price}€</h6>
+       <h6>Qté</h6><select class="form-select selected" data-id="${teddyPanier._id}" style="width:80px" aria-label="Default select example">
          <option value="1">1</option>
          <option value="2">2</option>
          <option value="3">3</option>
         <option value="4">4</option>
        </select>
        <a class="suppr" href="#">Supprimer</a>
-     </div>
-   </div></br>` 
+      </div>
+      <div class="panier__border_bas"></div>
+    </div>
+    </br>` 
    document.querySelectorAll(".suppr").forEach((product,i) => product.addEventListener("click", () =>  deleteProduct(i)))
 }
 
