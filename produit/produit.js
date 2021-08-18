@@ -19,11 +19,11 @@ fetch("http://localhost:3000/api/teddies/" + getUrlId)
           <img src="${ted.imageUrl}" class="card-img-top" alt="...">
           </br></br><h2 class="kalam">${ted.name}</h2>
             <h3 class="kalam">Prix: ${ted.price}€</h3>
-            <p class="card-text">${ted.description}</p>
-            <h6>Choisissez votre couleur:</h6>
-            <select class="form-select selected" style="width:300px"></select></br>
+            <p class="card-text">Description du produit: </br>${ted.description}</p>
+            <h5>Choisissez votre couleur:</h5>
+            <select class="form-select selected" style="width:150px"></select></br>
             <div class="col text-center">
-              <a href="#" class="btn btn-outline-primary ajout designAjout" data-id="${ted._id}">Ajouter au panier</a>
+              <a href="#" class="btn size btn-outline-primary ajout designAjout" data-id="${ted._id}">Ajouter au panier</a>
             </div>
         </div>` 
         }
