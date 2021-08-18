@@ -20,10 +20,11 @@ fetch("http://localhost:3000/api/teddies/order",
      console.log(orders.products);
     orders.products.forEach(product => {
         document.querySelector(".carte").innerHTML +=
-        `<div class="card" width="120" height="50">
-          <img src="${product.imageUrl}" class="card-img-top"  alt="...">
+        `<div class="confirmation_size">
+          <img src="${product.imageUrl}" class="card-img-top confirmation_size__img"  alt="...">
         <div class="card-body">
           <h5 class="card-title">${product.name}</h5>
+          <h5>Qté: 1</h5>
           <h6 class="card-subtitle mb-2 text-muted">${product.price}€</h6>
         </div>
       </div></br>`
@@ -33,6 +34,9 @@ fetch("http://localhost:3000/api/teddies/order",
     document.getElementById("orderCustomer").innerHTML = 
     `<div class= "alert alert-success" role="alert"> Félicitations ${orders.contact.firstName} pour votre commande chez Orinoco !</div>`;
     document.getElementById("somme").innerHTML = getSum();
+    document.querySelector(".envoieMail").innerHTML = `Un E-mail de confirmation vous a été 
+    envoyé à l'adresse suivant: ${orders.contact.email}`;
+
  });
    
 
