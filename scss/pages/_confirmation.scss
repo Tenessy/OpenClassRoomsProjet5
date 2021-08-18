@@ -1,0 +1,14 @@
+.carte {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    flex-wrap: wrap;
+}
+
+.confirmation_size {
+    width: 300px;
+    &__img {
+      width: 300px;
+    }
+}

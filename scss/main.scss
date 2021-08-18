@@ -1,0 +1,20 @@
+@import "./utils/variables";
+@import "./layout/carte";
+@import "./base/police";
+@import "./pages/confirmation";
+@import "./pages/panier";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+.alertProduit {
+  display: none;
+}
+  .bg-primary {
+    background-color: red;
+  }
+
+  h1 {
+    font-family: $headings-font-family;
+  }
+  a {
+    text-decoration: none;
+  }

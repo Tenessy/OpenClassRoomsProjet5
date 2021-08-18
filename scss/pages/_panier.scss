@@ -1,0 +1,30 @@
+.panier {
+  width: 100%;
+  padding-bottom: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 170px;
+  margin-left: 00;
+  margin-right: auto;
+  img {
+    width: 120px;
+    height: 120px;
+  }
+    &--color {
+     color: $secondary;
+    }
+    &__border_bas {
+      border-bottom: 1px solid black;
+      margin-top: 220px;
+      margin-left: -260px;
+      height: 0;
+      width: 100%;
+    }
+}
+
+.cart {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}

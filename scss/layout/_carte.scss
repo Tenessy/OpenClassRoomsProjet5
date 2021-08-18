@@ -1,0 +1,25 @@
+.rounded {
+  border-radius: 20px/20px;
+}
+.btn {
+  color :aqua;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  overflow: hidden;
+  &--color {
+    color: black;
+  }
+}
+.primary {
+  color: $primary;
+}
+.size {
+  width: 250px;
+}
+.carte {
+  height: auto;
+  overflow: hidden;
+}
