@@ -3,20 +3,19 @@ const paniers = getPanier();
 const panierVide = paniers.length === 0;
 const getSomme = getSum();
 //let titre= document.getElementById("titre").innerHTML = panierVide ? "Votre panier Orinoco est vide" : "Votre panier";
-let prix =document.getElementById("prix");
+let prix =document.querySelector(".panier__prix");
 let corps = document.querySelector(".corps");
 if (panierVide) {
   corps.innerHTML = 
      `<div class="text-center imgAuto">
-         <img src= "../image/PanierVide.png" class="imgAuto"/></br></br>
-         <a class="btn btn-primary" href="../index.html" role="button">Continuez vos achats</a>
+         <img src= "../image/panier_vide.png" width="100%" class="imgAuto"/></br></br>
+         <a class="btn btn-primary panier__bouton_vide" href="../index.html" role="button">Continuez vos achats</a>
        </div></br>`
-      titre.innerHTML = "Votre panier Orinoco est vide";
-
+      titre.innerHTML = `<h2 class="kalam gras">Votre panier Orinoco est vide</h2`;
 }
 else {
-  prix.innerHTML = getSomme;
-  titre.innerHTML = "Votre panier";
+  prix.innerHTML = `<h3 class="kalam">Prix total: ${getSomme}</h3>`;
+  titre.innerHTML = `<h2 class="kalam gras">Votre panier</h2`;
   console.log("OK");
 }
 
@@ -27,7 +26,7 @@ for(let panier of paniers) {
       <img src="${teddyPanier.imageUrl}" class="card-img-top" alt="...">
       <div class="card-body">
        <h5 class="card-title kalam">${teddyPanier.name}</h5>
-       <h6 class="card-subtitle mb-2 price kalam panier--color">${teddyPanier.price}€</h6>
+       <h6 class="card-subtitle mb-2 price kalam panier--color">${teddyPanier.price.toLocaleString()}€</h6>
        <h6>Qté</h6><select class="form-select selected" data-id="${teddyPanier._id}" style="width:80px" aria-label="Default select example">
          <option value="1">1</option>
          <option value="2">2</option>
