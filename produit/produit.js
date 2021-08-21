@@ -15,17 +15,18 @@ fetch("http://localhost:3000/api/teddies/" + getUrlId)
         let ted = new Teddy(teddy);
         if(ted._id === getUrlId) {
           document.querySelector(".carte").innerHTML = 
-          `<div class="container" width="350">
-          <img src="${ted.imageUrl}" class="card-img-top" alt="...">
-          </br></br><h2 class="kalam">${ted.name}</h2>
-            <h3 class="kalam">Prix: ${ted.price}€</h3>
-            <p class="card-text">Description du produit: </br>${ted.description}</p>
-            <h5>Choisissez votre couleur:</h5>
-            <select class="form-select selected" style="width:150px"></select></br>
-            <div class="col text-center">
+         `<div class="container" width="350">
+             <img src="${ted.imageUrl}" class="card-img-top" alt="...">
+             </br></br><h2 class="kalam gras">${ted.name}</h2><br>
+             <h3 class="kalam">Prix: ${ted.price.toLocaleString()}€</h3>
+             <h4 class="kalam">Description du produit:</h4>
+             <p class="card-text">${ted.description}</p><br>
+             <h5 class="kalam">Choisissez votre couleur:</h5>
+             <select class="form-select selected"style="width:200px"></select></br><br>
+             <div class="col text-center">
               <a href="#" class="btn size btn-outline-primary ajout designAjout" data-id="${ted._id}">Ajouter au panier</a>
             </div>
-        </div>` 
+          </div>` 
         }
         else {
           document.querySelector(".container").innerHTML =
