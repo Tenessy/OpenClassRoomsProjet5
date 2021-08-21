@@ -1,14 +1,14 @@
-.carte {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    flex-wrap: wrap;
-}
-
-.confirmation_size {
-    width: 300px;
-    &__img {
-      width: 300px;
-    }
+.confirmation {
+  
+  &__border_inf {
+    border-bottom: 1px solid grey;
+  }
+  &__livraion {
+    text-align: center;
+    width: 350px;
+    height: 350px;
+  }
+   img {
+     height:300px
+   }
 }

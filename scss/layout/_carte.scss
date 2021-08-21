@@ -1,25 +1,34 @@
+.cartes {
+  height: auto;
+  overflow: hidden;
+  &__home {
+    img {
+      height: 200px;
+      width: 250px;
+    }
+  }
+  &__onlyOne {
+    margin-top: 20px;
+    margin-left: 15px;
+    overflow: hidden;
+   @include mobile-only {
+     margin-left: 0;
+   }
+    &__lg {
+      @include lg-only;  
+    }
+    &--color {
+     color: black;
+    }
+  }
+}
 .rounded {
   border-radius: 20px/20px;
 }
-.btn {
-  color :aqua;
-}
-.cards {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-  overflow: hidden;
-  &--color {
-    color: black;
-  }
-}
+
 .primary {
   color: $primary;
 }
 .size {
   width: 250px;
-}
-.carte {
-  height: auto;
-  overflow: hidden;
 }

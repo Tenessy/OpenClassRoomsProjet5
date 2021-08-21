@@ -1,8 +1,10 @@
 @import "./utils/variables";
+@import "./utils/mixins";
 @import "./layout/carte";
 @import "./base/police";
 @import "./pages/confirmation";
 @import "./pages/panier";
+@import "./pages/home";
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 .alertProduit {
@@ -17,4 +19,12 @@
   }
   a {
     text-decoration: none;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+  }
+ 
+  footer{
+    margin-top: 40px;
   }

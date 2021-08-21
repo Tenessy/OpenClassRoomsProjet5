@@ -6,6 +6,12 @@ $card-border-color: black;
 $card-border-radius: 20px 20px 20px 20px;
 $card-height: auto;
 $border-width: 2px;
+$btn-padding-x: 3rem;
 
-
+$breakpoints: (
+    mobile: 576px,
+    tablette: 768px,
+    laptop: 1200px,
+    desktop: 1400px,
+);
 
