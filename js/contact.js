@@ -13,7 +13,8 @@ const alertMail = document.querySelector(".alertEmail");
 const alertAddress =document.querySelector(".alertAddress");
 const alertCity = document.querySelector(".alertCity");
 
-firstNameValue.addEventListener("input", function(event){
+if(firstNameValue) {
+    firstNameValue.addEventListener("input", function(event){
 
     if(!firstNameValue.validity.valid) {
         alertFirstName.innerHTML = "Le champs Nom n\'est pas valide";
@@ -25,9 +26,10 @@ firstNameValue.addEventListener("input", function(event){
         alertFirstName.innerHTML = "";
     }
 
-}, false)
+}, false)}
 
-lastNameValue.addEventListener("input", function(event){
+if(lastNameValue) { 
+    lastNameValue.addEventListener("input", function(event){
     if(!lastNameValue.validity.valid) {
         alertLastName.innerHTML ="Le champs Prénom n\'est pas valide";
     }
@@ -38,9 +40,10 @@ lastNameValue.addEventListener("input", function(event){
         alertLastName.innerHTML = "";
     }
 
-}, false)
+}, false)}
 
-mailValue.addEventListener("input", function(event){
+if (mailValue) { 
+    mailValue.addEventListener("input", function(event){
     if(!mailValue.validity.valid) {
         alertMail.innerHTML ="Le champs Email n\'est pas valide";
     }
@@ -51,9 +54,10 @@ mailValue.addEventListener("input", function(event){
         alertMail.innerHTML = "";
     }
 
-},false)
+},false)}
 
-addressValue.addEventListener("input", function(event){
+if (addressValue) {
+    addressValue.addEventListener("input", function(event){
     if(!addressValue.validity.valid) {
         alertAddress.innerHTML ="Le champs Ville n\'est pas valide";
     }
@@ -64,9 +68,10 @@ addressValue.addEventListener("input", function(event){
         alertAddress.innerHTML = "";
     }
 
-},false)
+},false)}
 
-cityValue.addEventListener("input", function(event){
+if(cityValue) {
+    cityValue.addEventListener("input", function(event){
     if(!cityValue.validity.valid) {
         alertCity.innerHTML ="Le champs Ville n\'est pas valide";
     }
@@ -77,7 +82,7 @@ cityValue.addEventListener("input", function(event){
         alertCity.innerHTML = "";
     }
 
-},false)
+},false)}
 
 if(form) {
     form.addEventListener("submit", function (e){

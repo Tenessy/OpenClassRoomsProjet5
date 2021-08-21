@@ -35,10 +35,13 @@ function productsId() {
 }
 function getSum() {
   let somme = 0;
+  let result;
   for (let i = 0; i < panier.length; i++) {
         somme += panier[i].price; // parcours le tableau panier et ajoute tout les prix qui sont contenus dans la variable somme
-  }    
-  return  "Prix total: " + somme + " € "; // retourne la somme
+        result = somme.toLocaleString();
+      } 
+  console.log(somme);
+  return result + " € "; // retourne la somme
 }
 
 function deleteProduct(index) {
