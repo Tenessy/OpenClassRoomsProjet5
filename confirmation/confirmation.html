@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../scss/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -17,7 +20,7 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div id="navbarContent" class="collapse navbar-collapse">
-                <div class="col-4 col-lg-6"></div>
+                <div class="col-4 col-lg-6">
                   <a class="navbar-brand" href="../index.html">
                     <img src="../image/oriinoco_logo.png" width="120" height="50" alt="Site logo">
                   </a>
@@ -39,14 +42,15 @@
       </div>
     </header>
     <section>
-      <h2 id ="orderCustomer"></h2>
-      <h3 id="orderId"></h3>
-      <h4>Récapitulatif de votre commande</h4>
-      <div class="card carte"></div>
-      <div class="containPrix">
-        <h4 id="somme"></h4>
-      </div>
-      <span class="envoieMail"></span>
+      <h2 id ="orderCustomer"></h2><br>
+      <h3 class="kalam gras text-center primary">Détails de votre commande</h3><br>
+      <div class="confirmation__border_inf" style="margin-top: -30px;"></div>
+      <div id="orderId"></div><br>
+      <div class="cartes confirmation"></div>
+      <div class="containPrix text-center"></div>
+      <div class="confirmation__border_inf"></div><br>
+      <div class="livraison bg-warning text-center"></div><br><br>
+      <div class="envoieMail text-center"></div>
     </section>
     <footer>
       <div class="bg-dark">
