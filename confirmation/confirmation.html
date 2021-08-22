@@ -20,18 +20,19 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div id="navbarContent" class="collapse navbar-collapse">
-                <div class="col-4 col-lg-6">
+                <div class="col-5 col-sm-7 col-lg-8">
                   <a class="navbar-brand" href="../index.html">
                     <img src="../image/oriinoco_logo.png" width="120" height="50" alt="Site logo">
                   </a>
                 </div>
-                <div class="col-8 col-lg-4">
+                <div class="col-7 col-sm-5 col-lg-4">
                   <ul class="navbar-nav">
                     <li class="nav-item">
                       <a class="nav-link" href="../index.html"><i class="fas fa-home"></i>Accueil</a>
                     </li>
                     <li class="nav-item">
                       <a class= "nav-link" href="../panier/panier.html"><i class="fas fa-shopping-cart panierTeddy"></i>Panier</a>
+                      <div class="nbr_article"></div>
                     </li>
                   </ul>
                 </div>
@@ -42,15 +43,17 @@
       </div>
     </header>
     <section>
-      <h2 id ="orderCustomer"></h2><br>
-      <h3 class="kalam gras text-center primary">Détails de votre commande</h3><br>
-      <div class="confirmation__border_inf" style="margin-top: -30px;"></div>
-      <div id="orderId"></div><br>
-      <div class="cartes confirmation"></div>
-      <div class="containPrix text-center"></div>
-      <div class="confirmation__border_inf"></div><br>
-      <div class="livraison bg-warning text-center"></div><br><br>
-      <div class="envoieMail text-center"></div>
+      <div id= "structurer" class="d-flex flex-column">
+       <div id ="orderCustomer" class="alert alert-success text-center" role="alert"></div><br>
+       <h2 class="kalam gras text-center primary">Détails de votre commande</h2><br>
+       <div class="confirmation__border_inf" style="margin-top: -30px;"></div><br>
+       <div id="orderId" class="text-center"></div><br>
+       <div class="cartes confirmation text-center"></div>
+       <div class="containPrix text-center"></div>
+       <div class="confirmation__border_inf"></div><br>
+       <div class="livraison bg-warning text-center"></div><br><br>
+       <div class="envoieMail text-center"></div>
+      </div>
     </section>
     <footer>
       <div class="bg-dark">
@@ -72,6 +75,7 @@
     <script src="../js/article.js"></script>
     <script src="../js/panierManager.js"></script>
     <script src="../js/contactManager.js"></script>
+    <script src="../js/functionManager.js"></script>
     <script src="confirmation.js"></script>
     <script src="../js/contact.js"></script>
   </body> 
