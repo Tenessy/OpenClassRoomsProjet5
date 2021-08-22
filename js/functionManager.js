@@ -15,66 +15,27 @@ function isValidMail(value) {
 function isValidAdress(value) {
    return /^[0-9]{1,} [a-zA-Z]{3,} [a-zA-Z]{2,}/.test(value);
 }
-/*
-firstNameValue.addEventListener('input', function(e){
-    let valeur = e.target.value;
-    if (!isValid(valeur)) {
-        console.log("Veuillez entrer des caractères valides");
-        e.preventDefault();
-    }
-    else {
-       console.log("Tout est bon");
-       contact.firstName = valeur;
-       console.log(contact.firstName);
-    }
-},false)
-lastNameValue.addEventListener("input", function(e) {
-   let valeur = e.target.value;
-    if (!isValid(valeur)) {
-      console.log("Veuillez entrer des caractères valides");
-      e.preventDefault();
-    }
-    else {
-      console.log("Tout est bon");
-      contact.lastName = valeur;
-      console.log(contact.lastName);
-    }
-},false)
-mailValue.addEventListener("input", function(e){
-    let valeur = e.target.value;
-    if (!isValidMail(valeur)) {
-      console.log("Veuillez entrer des caractères valides");
-      e.preventDefault();
-    }
-   else {
-      console.log("Tout est bon");
-      contact.mail= valeur;
-      console.log(contact.mail);
-      console.log(contact);
-    }
-},false)
-adressValue.addEventListener("input", function(e) {
-   let valeur = e.target.value;
-    if (!isValidAdress(valeur)) {
-      console.log("Veuillez entrer des caractères valides");
-      e.preventDefault();
-    }
-    else {
-      console.log("Tout est bon");
-      contact.adress = valeur;
-      console.log(contact.adress);
-    }
-},false)
-cityValue.addEventListener("input", function(e) {
-   let valeur = e.target.value;
-    if (!isValid(valeur)) {
-      console.log("Veuillez entrer des caractères valides");
-      e.preventDefault();
-    }
-    else {
-       console.log("Tout est bon");
-       contact.city = valeur;
-      console.log(contact.city);
-   }
-},false)
-*/
+
+function duJour() {
+  let today = new Date();
+  const jours = today.getDate();
+  const mois = today.getMonth();
+  const annee = today.getFullYear();
+  const tabMois = ["janvier", "février", "mars", "avril", 
+  "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
+  let heure = today.getHours();
+  let minutes = today.getMinutes();
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+  if(minutes > 59) {
+    minutes = "00";
+  }
+  if (heure < 10 ) {
+    heure = "0" + heure;
+  }
+  if (heure > 23) {
+    heure = "00";
+  }
+  return jours + " " + tabMois[mois] + " " + annee + " à " + heure + ":" + minutes;
+}
