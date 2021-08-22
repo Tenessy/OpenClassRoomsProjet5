@@ -2,6 +2,7 @@
 const paniers = getPanier();
 const panierVide = paniers.length === 0;
 const getSomme = getSum();
+document.querySelector(".nbr_article").innerHTML = paniers.length;
 //let titre= document.getElementById("titre").innerHTML = panierVide ? "Votre panier Orinoco est vide" : "Votre panier";
 let prix =document.querySelector(".panier__prix");
 let corps = document.querySelector(".corps");
