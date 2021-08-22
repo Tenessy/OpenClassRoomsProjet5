@@ -19,3 +19,8 @@
       @content;
     }
 }
+@mixin grandEcran {
+  @media screen and (min-width: map-get($breakpoints, laptop)){
+    @content;  
+  }
+}

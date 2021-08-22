@@ -6,12 +6,15 @@
   height: 170px;
   @include tablette-only {
     img {
-      width: 300px;
-      margin-left: 30px;
+      margin-left: 50px;
+    }
+    .card-img {
+      width: 0;
     }
     .card-body{
-      margin-left: 70px;
+      margin-left: 50px;
       margin-top: 10px;
+      width: 150px;
       h5, h6 {
         font-size: 25px;
       }

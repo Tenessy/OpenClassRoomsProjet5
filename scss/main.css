@@ -41,6 +41,19 @@
   width: 250px;
 }
 
+@media screen and (min-width: 768px) {
+  header img {
+    width: 150px;
+  }
+}
+header a {
+  font-weight: bold;
+}
+header i {
+  font-size: 23px;
+  color: black;
+}
+
 .kalam {
   font-family: "Kalam", cursive;
 }
@@ -61,10 +74,50 @@
   width: 350px;
   height: 350px;
 }
+@media screen and (min-width: 768px) {
+  .confirmation img {
+    width: 500px;
+    height: auto;
+  }
+  .confirmation h5, .confirmation .h5, .confirmation h6, .confirmation .h6 {
+    font-size: 25px;
+  }
+  .confirmation h4, .confirmation .h4 {
+    font-size: 30px;
+  }
+}
 .confirmation img {
   height: 300px;
 }
 
+#orderCustomer h1, #orderCustomer .h1 {
+  font-size: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .containPrix p {
+    font-size: 25px;
+  }
+
+  section h3, section .h3 {
+    font-size: 30px;
+  }
+
+  .envoieMail {
+    font-size: 20px;
+  }
+
+  #orderId h4, #orderId .h4, h5, .h5 {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #structurer {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .panier {
   padding-bottom: -10px;
   display: flex;
@@ -74,12 +127,15 @@
 }
 @media screen and (min-width: 768px) {
   .panier img {
-    width: 300px;
-    margin-left: 30px;
+    margin-left: 50px;
+  }
+  .panier .card-img {
+    width: 0;
   }
   .panier .card-body {
-    margin-left: 70px;
+    margin-left: 50px;
     margin-top: 10px;
+    width: 150px;
   }
   .panier .card-body h5, .panier .card-body .h5, .panier .card-body h6, .panier .card-body .h6 {
     font-size: 25px;
@@ -137,6 +193,22 @@
 
 .container__position {
   margin-top: 30px;
+}
+
+.nbr_article {
+  background-color: #F44359;
+  border-radius: 50%;
+  width: 17px;
+  height: 17px;
+  display: flex;
+  position: absolute;
+  margin-top: -40px;
+  margin-left: 15px;
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
 }
 
 /*!
