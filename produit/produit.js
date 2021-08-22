@@ -1,4 +1,7 @@
 const getUrlId = getUrl();
+const longueurPanier = getPanier().length;
+document.querySelector(".nbr_article").innerHTML = longueurPanier;
+
 fetch("http://localhost:3000/api/teddies/" + getUrlId)
 .then(function(res) {
   if (res.ok) {
@@ -6,7 +9,7 @@ fetch("http://localhost:3000/api/teddies/" + getUrlId)
   }
   else {
     document.querySelector(".generale").innerHTML =
-          `<h1>Erreur 404 page introuvable</h1>
+          `<h1 class="kalam gras text-center">Erreur 404 page introuvable</h1>
           <img src="../image/404-error.jpg" alt="NotFound" />`;
           console.log("Erreur 404 page introuvable");
   }
@@ -17,7 +20,7 @@ fetch("http://localhost:3000/api/teddies/" + getUrlId)
           document.querySelector(".carte").innerHTML = 
          `<div class="container" width="350">
              <img src="${ted.imageUrl}" class="card-img-top" alt="...">
-             </br></br><h2 class="kalam gras">${ted.name}</h2><br>
+             </br></br><h2 class="kalam gras primary">${ted.name}</h2><br>
              <h3 class="kalam">Prix: ${ted.price.toLocaleString()}€</h3>
              <h4 class="kalam">Description du produit:</h4>
              <p class="card-text">${ted.description}</p><br>
@@ -48,9 +51,9 @@ fetch("http://localhost:3000/api/teddies/" + getUrlId)
         document.querySelectorAll(".ajout").forEach(ajouter => {
           ajouter.addEventListener("click", function(e) {
              addProduct(teddy);
-             document.querySelector('.alertProduit').style.display = 'block';
-             document.querySelector('.alertProduit').innerHTML = ted.name + " a été ajouté à votre panier avec succès " + `<a href="../panier/panier.html>Voir mon panier</a>`
-          })
+             console.log(getPanier().length);
+             document.location.reload();
+            })
         })
 })
 
