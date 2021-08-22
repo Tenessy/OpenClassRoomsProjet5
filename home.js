@@ -1,3 +1,5 @@
+const paniers = getPanier();
+document.querySelector(".nbr_article").innerHTML = paniers.length;
 
 fetch("http://localhost:3000/api/teddies")
  .then(data => data.json())
