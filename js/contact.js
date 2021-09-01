@@ -15,14 +15,13 @@ const alertCity = document.querySelector(".alertCity");
 
 if(firstNameValue) {
     firstNameValue.addEventListener("input", function(event){
-
     if(!firstNameValue.validity.valid) {
         alertFirstName.innerHTML = "Le champs Nom n\'est pas valide";
     }
     if(firstNameValue.value === "") {
         alertFirstName.innerHTML = "Veuillez remplir le champs Nom"; 
     }
-   else if(firstNameValue.validity.valid) {
+    else if(firstNameValue.validity.valid) {
         alertFirstName.innerHTML = "";
     }
 
@@ -42,7 +41,7 @@ if(lastNameValue) {
 
 }, false)}
 
-if (mailValue) { 
+if(mailValue) { 
     mailValue.addEventListener("input", function(event){
     if(!mailValue.validity.valid) {
         alertMail.innerHTML ="Le champs Email n\'est pas valide";
@@ -56,13 +55,13 @@ if (mailValue) {
 
 },false)}
 
-if (addressValue) {
+if(addressValue) {
     addressValue.addEventListener("input", function(event){
     if(!addressValue.validity.valid) {
-        alertAddress.innerHTML ="Le champs Ville n\'est pas valide";
+        alertAddress.innerHTML ="Le champs adresse postale n\'est pas valide";
     }
     if(addressValue.value === "") {
-        alertAddress.innerHTML = "Veuillez remplir le champs Ville"; 
+        alertAddress.innerHTML = "Veuillez remplir le champs adresse postale"; 
     }
     else if(addressValue.validity.valid) {
         alertAddress.innerHTML = "";
@@ -72,7 +71,7 @@ if (addressValue) {
 
 if(cityValue) {
     cityValue.addEventListener("input", function(event){
-    if(!cityValue.validity.valid) {
+    if(!cityValue.validity.value) {
         alertCity.innerHTML ="Le champs Ville n\'est pas valide";
     }
     if(cityValue.value === "") {
@@ -125,11 +124,9 @@ if(form) {
                 contact.firstName = firstNameValue.value;
                 contact.lastName = lastNameValue.value;
                 contact.email = mailValue.value;
-                contact. address = addressValue.value;
+                contact.address = addressValue.value;
                 contact.city = cityValue.value;
-    
-                addContact(contact);
-             
+                addContact(contact);       
         }
     });
     
