@@ -1,6 +1,9 @@
 .cartes {
   height: auto;
   overflow: hidden;
+  @include grandEcran{
+    margin-top: 70px;
+  }
   &__home {
     img {
       height: 200px;

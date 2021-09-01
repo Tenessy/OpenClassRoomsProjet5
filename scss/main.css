@@ -3,6 +3,11 @@
   height: auto;
   overflow: hidden;
 }
+@media screen and (min-width: 1200px) {
+  .cartes {
+    margin-top: 70px;
+  }
+}
 .cartes__home img {
   height: 200px;
   width: 250px;
@@ -52,6 +57,17 @@ header a {
 header i {
   font-size: 23px;
   color: black;
+}
+
+@media screen and (min-width: 1200px) {
+  footer .container {
+    margin-top: 180px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  footer .container__home {
+    margin-top: 250px;
+  }
 }
 
 .kalam {
@@ -137,9 +153,6 @@ header i {
     margin-top: 10px;
     width: 150px;
   }
-  .panier .card-body h5, .panier .card-body .h5, .panier .card-body h6, .panier .card-body .h6 {
-    font-size: 25px;
-  }
 }
 .panier a {
   color: #06016F;
@@ -193,6 +206,14 @@ header i {
 
 .container__position {
   margin-top: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .card-img__size,
+.card-img-top__size,
+.card-img-bottom__size {
+    width: 100% !important;
+  }
 }
 
 .nbr_article {

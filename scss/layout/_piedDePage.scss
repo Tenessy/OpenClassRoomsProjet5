@@ -1,0 +1,12 @@
+footer {
+   .container{
+    @include grandEcran{
+        margin-top: 180px;     
+    }
+    &__home {
+        @include grandEcran {
+            margin-top: 250px;
+        }
+    }
+   }
+}
