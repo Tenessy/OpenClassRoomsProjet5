@@ -19,7 +19,7 @@ fetch("http://localhost:3000/api/teddies/" + getUrlId)
         if(ted._id === getUrlId) {
           document.querySelector(".carte").innerHTML = 
          `<div class="container" width="350">
-             <img src="${ted.imageUrl}" class="card-img-top" alt="...">
+              <img src="${ted.imageUrl}" class="card-img-top card-img__size" alt="..." />
              </br></br><h2 class="kalam gras primary">${ted.name}</h2><br>
              <h3 class="kalam">Prix: ${ted.price.toLocaleString()}€</h3>
              <h4 class="kalam">Description du produit:</h4>
@@ -38,23 +38,28 @@ fetch("http://localhost:3000/api/teddies/" + getUrlId)
        }    
         function color() {
           let select = document.querySelector(".selected");
-          let teddyColor = teddy.colors
-          for (let i =0; i < teddyColor.length; i++) {
-            console.log(teddyColor[i])
-            let option = document.createElement("option");
-            option.value = teddyColor[i];
-            option.text = teddyColor[i];
-            select.appendChild(option);   
-          } 
+          let teddyColor = teddy.colors;
+          if (teddyColor === []) {
+            console.log("Le tableau est vide");
+          }
+          else {
+            for (let i = 0; i < teddyColor.length; i++) {
+              console.log(teddyColor[i]);
+              let option = document.createElement("option");
+              option.value = teddyColor[i];
+              option.text = teddyColor[i];
+              select.appendChild(option);   
+              console.log("Couleurs ajoutées avec succès");
+            } 
+          }
         }
         color();
         document.querySelectorAll(".ajout").forEach(ajouter => {
           ajouter.addEventListener("click", function(e) {
              addProduct(teddy);
-             console.log(getPanier().length);
              document.location.reload();
-            })
-        })
-})
+            });
+        });
+});
 
 
