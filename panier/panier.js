@@ -7,10 +7,10 @@ let corps = document.querySelector(".corps");
 if (panierVide) {
   titre.innerHTML = `<h2 class="kalam gras">Votre panier Orinoco est vide</h2`;
   corps.innerHTML =
-    `<div class="text-center imgAuto">
-         <img src= "../image/panier_vide.png" width="100%" class="imgAuto"/></br></br>
+     `<div class="text-center panier__empty">
+         <img src= "../image/panier_vide.png"/></br></br>
          <a class="btn btn-primary panier__bouton_vide" href="../index.html" role="button">Continuez vos achats</a>
-       </div></br>`
+      </div><br>`
 }
 else {
   titre.innerHTML = `<h2 class="kalam gras">Votre panier</h2`;
@@ -23,7 +23,7 @@ for (let panier of paniers) {
   document.querySelector(".card").innerHTML +=
     `<div class="panier">
       <img src="${teddyPanier.imageUrl}" class="card-img-top" alt="...">
-      <div class="card-body">
+      <div class="card-body panier__text_position">
        <h5 class="card-title kalam">${teddyPanier.name}</h5>
        <h6 class="card-subtitle mb-2 price kalam panier--color">${teddyPanier.price.toLocaleString()}€</h6>
        <h6>Qté</h6><select class="form-select selected" data-id="${teddyPanier._id}" style="width:80px" aria-label="Default select example">

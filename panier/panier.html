@@ -49,12 +49,12 @@
   <section>
     <div class="text-center" id="titre"></div><br>
     <div class="container corps">
-      <div class="row d-flex flex-column justify-content-center flex-wrap flex-lg-row">
-        <div class="col structure">
-          <div class="card carte cart d-flex justify-content-center"></div>
+      <div class="d-flex flex-column justify-content-lg-between flex-wrap flex-lg-row">
+        <div class="col-12 col-xl-5 panier__structure">
+          <div class="card carte cart d-flex"></div>
           <div class="panier__prix"></div><br>
         </div>
-        <div class="col col-lg-6 bg-light panier__formu"><br>
+        <div class="col-12 col-xl-5 bg-light panier__formu"><br>
           <h3 class="kalam text-center">Formulaire de commande</h3>
           <form action="../confirmation/confirmation.html" id="poster">
             <div class="form-group">
@@ -88,7 +88,7 @@
               <div class="text-danger alertCity" role="alert"></div>
             </div><br><br>
             <div class="text-center">
-              <button type="submit" id="envoyer" class="btn btn-primary">Commander</button>
+              <button type="submit" id="envoyer" class="btn btn-primary panier__formu__bouton">Commander</button>
             </div>
           </form>
         </div>
@@ -97,7 +97,7 @@
   </section>
   <footer>
     <div class="bg-dark panier__bas_de_page">
-      <div class="container">
+      <div class="container container__panier">
         <div class="row">
           <div class="col">
             <ul class="list-inline text-center">
