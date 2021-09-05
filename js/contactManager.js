@@ -1,14 +1,14 @@
 function addContact(contact) {
-    if(contact === null) {
-       console.log("contact est null");
+    if (contact === null) {
+        console.log("contact est null");
     }
-    if(isNaN(contact) === false) {
-       console.log("contact est un nombre");
+    if (isNaN(contact) === false) {
+        console.log("contact est un nombre");
     }
-    if(contact === "") {
+    if (contact === "") {
         console.log("contact est vide");
     }
-    if(contact === undefined) {
+    if (contact === undefined) {
         console.log("contact n'existe pas");
     }
     else {
@@ -19,10 +19,10 @@ function addContact(contact) {
 
 function getContact() {
     let contactStorage = sessionStorage.getItem("contact");
-    if(contactStorage === null) {
-       return [];
+    if (contactStorage === null) {
+        return [];
     }
     else {
-       return JSON.parse(contactStorage);
+        return JSON.parse(contactStorage);
     }
 }
