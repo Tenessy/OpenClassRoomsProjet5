@@ -1,6 +1,6 @@
 .confirmation {
   &__border_inf {
-    border-bottom: 1px solid grey; 
+    border-bottom: 1px solid grey;
   }
   &__livraion {
     text-align: center;
@@ -12,19 +12,29 @@
       width: 500px;
       height: auto;
     }
-    h5,h6 {
+    h5,
+    h6 {
       font-size: 25px;
     }
     h4 {
       font-size: 30px;
     }
   }
-   img {
-     height:300px
-   }
+  img {
+    height: 300px;
+  }
 }
-#orderCustomer h1{
- font-size: 20px;
+#orderCustomer {
+  h1 {
+    font-size: 20px;
+  }
+}
+.alert {
+  margin-top: 10px;
+  border-radius: 0rem !important;
+  @include grandEcran {
+    border-radius: $border-radius !important;
+  }
 }
 @include tablette-only {
   .containPrix p {
@@ -36,7 +46,8 @@
   .envoieMail {
     font-size: 20px;
   }
-  #orderId h4,h5{
+  #orderId h4,
+  h5 {
     font-size: 25px;
   }
 }
@@ -47,4 +58,4 @@
     margin-right: auto;
   }
 }
- 
+

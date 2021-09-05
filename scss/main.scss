@@ -14,21 +14,13 @@
 .alertProduit {
   display: none;
 }
-  .bg-primary {
-    background-color: red;
-  }
-
-  h1 {
-    font-family: $headings-font-family;
-  }
-  a {
-    text-decoration: none;
-  }
-  body{
-    margin: 0;
-    padding: 0;
-  }
- 
-  footer{
-    margin-top: 40px;
-  }
+.bg-primary {
+  background-color: red;
+}
+a {
+  text-decoration: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+}

@@ -1,7 +1,7 @@
 .cartes {
   height: auto;
   overflow: hidden;
-  @include grandEcran{
+  @include grandEcran {
     margin-top: 70px;
   }
   &__home {
@@ -14,14 +14,14 @@
     margin-top: 20px;
     margin-left: 15px;
     overflow: hidden;
-   @include mobile-only {
-     margin-left: 0;
-   }
+    @include mobile-only {
+      margin-left: 0;
+    }
     &__lg {
-      @include lg-only;  
+      @include lg-only;
     }
     &--color {
-     color: black;
+      color: black;
     }
   }
 }
