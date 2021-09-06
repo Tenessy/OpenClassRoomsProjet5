@@ -9,8 +9,10 @@ fetch("http://localhost:3000/api/teddies/" + getUrlId)
     }
     else {
       document.querySelector(".generale").innerHTML =
-        `<h1 class="kalam gras text-center">Erreur 404 page introuvable</h1>
-          <img src="../image/404-error.jpg" alt="NotFound" />`;
+        ` <div class="text-center produit__404">
+            <h1 class="kalam gras text-center">Erreur 404 page introuvable</h1>
+            <img src="../image/404-error.jpg" alt="NotFound" />
+          </div>`;
       console.log("Erreur 404 page introuvable");
     }
   })
