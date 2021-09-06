@@ -19,11 +19,6 @@
       }
     }
   }
-  /*@include tablette-only {
-    &__structure {
-      width: 80% !important;
-    }
-  }*/
   &__empty {
     margin-top: 25px;
     img {
@@ -54,6 +49,9 @@
       width: 380px;
       height: 245px;
       margin-top: -15px;
+    }
+    @include grandEcran {
+      width: 245px;
     }
   }
   &__bas_de_page {
@@ -92,6 +90,8 @@
   }
   &__formu {
     padding-bottom: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
     &__bouton {
       @include tablette-only {
         font-size: 1.5rem !important;
