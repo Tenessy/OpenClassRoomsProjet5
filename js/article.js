@@ -7,6 +7,6 @@ class Teddy {
         this.imageUrl = tedArticle.imageUrl;
         this.description = tedArticle.description;
     }
-   
+
 }
 

@@ -24,12 +24,12 @@ function duJour() {
     }
     const date = today.toLocaleString('fr-FR', options); // transforme la date au format local
 
-    if(isNaN(Date.parse(date)) === false) {  // Vérifie que la date renvoie un nombre
+    if (isNaN(Date.parse(date)) === false) {  // Vérifie que la date renvoie un nombre
         console.log("la Date est OK");
         return date; // retourne la date au format FR et qui contient toutes les informations contenu dans l'objet options
     }
     else {
         console.log("La date n'est pas valide");
     }
-       
+
 }

@@ -16,7 +16,6 @@ function addContact(contact) {
     }
 }
 
-
 function getContact() {
     let contactStorage = sessionStorage.getItem("contact");
     if (contactStorage === null) {
