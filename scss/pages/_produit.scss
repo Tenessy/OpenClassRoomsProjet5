@@ -1,12 +1,4 @@
-.card-img,
-.card-img-top,
-.card-img-bottom {
-    &__size {
-        @include grandEcran {
-            width: 100% !important;
-        }
-    }
-}
+
 .produit {
     &__404 {
         img {

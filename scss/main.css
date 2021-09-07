@@ -306,14 +306,15 @@ h5,
   margin-top: 30px;
 }
 
-@media screen and (min-width: 1200px) {
-  .card-img__size,
-.card-img-top__size,
-.card-img-bottom__size {
-    width: 100% !important;
-  }
-}
-
+/*.card-img,
+.card-img-top,
+.card-img-bottom {
+    &__size {
+        @include grandEcran {
+            width: 100% !important;
+        }
+    }
+}*/
 .produit__404 img {
   -o-object-fit: cover;
      object-fit: cover;
