@@ -1,35 +1,45 @@
 
-function getUrl(id) {
-    let Url = new URL(window.location);
-    Url.pathname = "produit/produit.html";
-    const searchId = Url.searchParams.get("id");
-    console.log(id)
-    return searchId; //retourne l'id contenu dans l'URL;
-}
-function isValid(value) {
-    return /^[a-zA-Z]+$/.test(value);
-}
-function isValidMail(value) {
-    return /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,4}$/.test(value);
-}
-function isValidAdress(value) {
-    return /[0-9]{1,3}(?:(?:[,. ]){1}[-a-zA-Zàâäéèêëïîôöùûüç]+)+/.test(value);
+function addTeddy(teddyId) {
+    recupId(teddyId);   
 }
 
-function duJour() {
-    let today = new Date(); // créer une date
-    let options = {
-        weekday: 'long', year: 'numeric',
-        month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'
-    }
-    const date = today.toLocaleString('fr-FR', options); // transforme la date au format local
-
-    if (isNaN(Date.parse(date)) === false) {  // Vérifie que la date renvoie un nombre
-        console.log("la Date est OK");
-        return date; // retourne la date au format FR et qui contient toutes les informations contenu dans l'objet options
-    }
-    else {
-        console.log("La date n'est pas valide");
-    }
-
+function recupId(getId) {
+    localStorage.setItem("teddyId", JSON.stringify(getId));
 }
+
+function afficheId() {
+    let id = localStorage.getItem("teddyId");
+        if(id == null) {
+            console.log("hey");
+            return[];    
+        }
+        else {
+            console.log(JSON.parse(id));
+            return JSON.parse(id);     
+        }
+   
+}
+
+function recupColor(color) {
+    return color;
+}
+
+ function url() {
+      let url = new URL(window.location);
+      url.pathname="produit/produit.html";// Url de base de la page 
+      const id = afficheId();
+      url.searchParams.append("id", id);// ajoute un paramètre id avec l'id de l'ours en paramètre
+
+      return url;    
+      
+ }
+
+ function getUrl() {
+    const id = url().searchParams.get("id"); // retourne l'identifiant de l'ours passé dans l'url
+    return id;
+ }
+
+
+
+ 
+ 
