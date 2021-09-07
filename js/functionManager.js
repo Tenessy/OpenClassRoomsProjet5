@@ -1,9 +1,8 @@
 
-function getUrl(id) {
+function getUrl() {
     let Url = new URL(window.location);
     Url.pathname = "produit/produit.html";
     const searchId = Url.searchParams.get("id");
-    console.log(id);
     if (Url.searchParams.has("id")) {
         return searchId; //retourne l'id contenu dans l'URL;
     }
