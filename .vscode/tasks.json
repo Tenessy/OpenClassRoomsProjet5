@@ -1,0 +1,21 @@
+{
+    
+    "version": "2.0.0",
+    "command": "Chrome",
+    "osx": {
+        "command": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    },
+    "args": [
+        "${file}"
+    ],
+    "tasks": [
+        {
+            "type": "npm",
+            "script": "start",
+            "path": "JWDP5/index.html",
+            "problemMatcher": [],
+            "label": "npm: start - JWDP5",
+            "detail": "node server.js"
+        }
+    ]
+}
