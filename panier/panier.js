@@ -8,8 +8,8 @@ if (panierVide) {
   titre.innerHTML = `<h2 class="kalam gras">Votre panier Orinoco est vide</h2`;
   corps.innerHTML =
      `<div class="text-center panier__empty">
-         <img src= "../image/panier_vide.png"/></br></br>
-         <a class="btn btn-primary panier__bouton_vide" href="../index.html" role="button">Continuez vos achats</a>
+         <img src= "image/panier_vide.png"/></br></br>
+         <a class="btn btn-primary panier__bouton_vide" href="index.html" role="button">Continuez vos achats</a>
       </div><br>`
 }
 else {
