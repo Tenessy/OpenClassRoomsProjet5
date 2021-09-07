@@ -1,0 +1,27 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./layout/carte";
+@import "./layout/entete";
+@import "./layout/piedDePage";
+@import "./base/police";
+@import "./pages/confirmation";
+@import "./pages/panier";
+@import "./pages/home";
+@import "./pages/produit";
+@import "./composants/cercle";
+@import "./composants/bouton";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+.alertProduit {
+  display: none;
+}
+.bg-primary {
+  background-color: red;
+}
+a {
+  text-decoration: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+}

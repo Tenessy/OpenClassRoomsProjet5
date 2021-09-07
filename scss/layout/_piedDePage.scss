@@ -1,0 +1,21 @@
+footer {
+    margin-top: 40px;
+}
+.container {
+    &__panier {
+        @include mobile-only {
+            margin-top: 110px;
+        }
+        @include tablette-only {
+            margin-top: 110px;
+        }
+        @include grandEcran {
+            margin-top: 150px;
+        }
+    }
+    &__home {
+        @include grandEcran {
+            margin-top: 250px;
+        }
+    }
+}

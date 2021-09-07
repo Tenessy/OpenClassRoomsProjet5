@@ -1,0 +1,14 @@
+header {
+    @include tablette-only {
+        img {
+            width: 150px;
+        }
+    }
+    a {
+        font-weight: bold;
+    }
+    i {
+        font-size: 23px;
+        color: black;
+    }
+}

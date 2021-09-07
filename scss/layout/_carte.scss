@@ -1,0 +1,37 @@
+.cartes {
+  height: auto;
+  overflow: hidden;
+  @include grandEcran {
+    margin-top: 70px;
+  }
+  &__home {
+    img {
+      height: 200px;
+      width: 250px;
+    }
+  }
+  &__onlyOne {
+    margin-top: 20px;
+    margin-left: 15px;
+    overflow: hidden;
+    @include mobile-only {
+      margin-left: 0;
+    }
+    &__lg {
+      @include lg-only;
+    }
+    &--color {
+      color: black;
+    }
+  }
+}
+.rounded {
+  border-radius: 20px/20px;
+}
+
+.primary {
+  color: $primary;
+}
+.size {
+  width: 250px;
+}
