@@ -1,25 +1,29 @@
+const paniers = getPanier();
+document.querySelector(".nbr_article").innerHTML = paniers.length;
+
 fetch("http://localhost:3000/api/teddies")
- .then(data => data.json())
+  .then(data => data.json())
   .then(teddiesArticle => {
-       console.log(teddiesArticle);
-      for(let teddieArticle of teddiesArticle) {
-          let teddy = new Teddy(teddieArticle);
-          document.querySelector(".container").innerHTML += 
-          `<div class="card" style="width: 18rem;">
-          <img src="${teddy.imageUrl}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">${teddy.name}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">${teddy.price}€</h6>
-            <p class="card-text">${teddy.description}</p>
-            <a href="${url()}" class="btn btn-primary" data-id="${teddy._id}">Voir le produit</a>
+    for (let teddieArticle of teddiesArticle) {
+      let teddy = new Teddy(teddieArticle);
+      document.querySelector(".cartes").innerHTML +=
+        `<div class="card cartes__onlyOne cartes__onlyOne--color d-flex flex-sm-row flex-xl-row flex-xxl-column cartes__onlyOne__lg">
+        <img src="${teddy.imageUrl}" class="card-img-top" alt="ours en peluche" />
+        <div class="card-body text-center">
+          <h4 class="card-tittle font-weight-bold kalam gras primary">${teddy.name}</h4>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div></br>
+          <h4 class="card-subtitle kalam">${teddy.price.toLocaleString()}€</h4>
+          <div class="col text-center">
+            <a href="produit/produit.html?id=${teddy._id}" class="btn btn-primary btn__home">Voir le produit</a>
           </div>
-        </div>`
-          
-    } 
-    document.querySelectorAll(".btn-primary").forEach(bouton => {
-        bouton.addEventListener("click", function(e) {
-            addTeddy(this.dataset.id);
-           
-        })
-    })
- })
+        </div>
+      </div></br>`
+    }
+  });
+
