@@ -20,7 +20,7 @@ fetch("http://localhost:3000/api/teddies")
           </div></br>
           <h4 class="card-subtitle kalam">${teddy.price.toLocaleString()}€</h4>
           <div class="col text-center">
-            <a href="produit/produit.html?id=${teddy._id}" class="btn btn-primary btn__home">Voir le produit</a>
+            <a href="produit/produit.html?id=${teddy._id}" class="btn btn-primary btn__home" data-id="${teddy._id}">Voir le produit</a>
           </div>
         </div>
       </div></br>`
