@@ -48,7 +48,7 @@ function getSum() {
   let result;
   if (panier.length !== 0) {
     for (let i = 0; i < panier.length; i++) {
-      somme += panier[i].price; // parcours le tableau panier et ajoute tout les prix qui sont contenus dans la variable somme
+      somme += panier[i].price / 100; // parcours le tableau panier et ajoute tout les prix qui sont contenus dans la variable somme
       result = somme.toLocaleString();
     }
     console.log(somme);
