@@ -23,7 +23,7 @@ fetch("http://localhost:3000/api/teddies/" + getUrlId)
         `<div class="container" width="350">
               <img src="${ted.imageUrl}" class="card-img-top card-img__size" alt="..." />
              </br></br><h2 class="kalam gras primary">${ted.name}</h2><br>
-             <h3 class="kalam">Prix: ${ted.price.toLocaleString()}€</h3>
+             <h3 class="kalam">Prix: ${(ted.price / 100).toLocaleString()}€</h3>
              <h4 class="kalam">Description du produit:</h4>
              <p class="card-text">${ted.description}</p><br>
              <h5 class="kalam">Choisissez votre couleur:</h5>
