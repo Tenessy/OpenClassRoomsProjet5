@@ -59,13 +59,13 @@
           <form action="../confirmation/confirmation.html" id="poster">
             <div class="form-group">
               <label for="firstName">Nom</label>
-              <input type="text" class="form-control" id="firstName" pattern="^[a-zA-Z]{3,20}" placeholder="ex: Dupond"
+              <input type="text" class="form-control" id="firstName" pattern="^[a-zA-Z- ']{3,20}$" placeholder="ex: Dupond"
                 minlength="3">
               <span class="text-danger alertFirstName" role="alert"></span>
             </div><br>
             <div class="form-group">
               <label for="lastName">Prénom</label>
-              <input type="text" class="form-control" id="lastName" pattern="^[a-zA-Z]{3,20}" placeholder="ex: Benoit"
+              <input type="text" class="form-control" id="lastName" pattern="^[a-zA-Z- ']{3,20}" placeholder="ex: Benoit"
                 minlength="3">
               <span class="text-danger alertLastName" role="alert"></span>
             </div><br>
